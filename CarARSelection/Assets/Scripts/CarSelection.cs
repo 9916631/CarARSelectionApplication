@@ -52,7 +52,7 @@ public class CarSelection : MonoBehaviour {
         carList[currentCar].SetActive(true);
         GameController.currentSelectedCar = carList[currentCar].name;
         //partical system stuff
-        GameObject cloudSystem = (GameObject)Instantiate(Resources.Load("CloudPartical"));
+        GameObject cloudSystem = (GameObject)Instantiate(Resources.Load("CloudParticale"));
         ParticleSystem cloudPuff = cloudSystem.GetComponent<ParticleSystem>();
         cloudPuff.Play();
         cloudPuff.transform.position = new Vector3(0.65f, -2, 3);
