@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	public static string currentSelectedCar = "Tocus";
+	public static string currentSelectedCar = "myLamboConvert";
 		
 	// Update is called once per frame
 	//void Update () 

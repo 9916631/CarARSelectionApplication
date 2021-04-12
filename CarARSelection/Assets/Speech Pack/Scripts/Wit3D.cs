@@ -44,15 +44,17 @@ public partial class Wit3D : MonoBehaviour {
 	public AudioClip commandClip;
 	int samplerate;
 
-	// API access parameters
-	string url = "https://api.wit.ai/speech?v=20180206";
-	string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
-	//string url = "https://api.wit.ai/message?v=20210308&q=";
-	//string token = "44WF73YZKNO27KSC72I27ROVUQIYJPCH";
+    // API access parameters
+    string url = "https://api.wit.ai/speech?v=20180206&q=";//iadded the &q= at the end but may make no difference
+    string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
+    //string url = "https://api.wit.ai/message?v=20210308&q=";
+    //string token = "44WF73YZKNO27KSC72I27ROVUQIYJPCH";
+    //string url = "https://api.wit.ai/message?v=20210413&q=";
+    //string token = "QC5G3CSULDCI6NRCEO7K2YILFQSTYRLH";
 
-	//Custom 1
- 	// GameObject to use as a default spawn point
- 	private bool isRecording = false;
+    //Custom 1
+    // GameObject to use as a default spawn point
+    private bool isRecording = false;
 	private bool pressedButton = false;
 	public Text myResultBox;
 	//public VideoPlayer vidScreen;
