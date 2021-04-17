@@ -72,7 +72,7 @@ public partial class Wit3D : MonoBehaviour {
 				{
 					Debug.Log(aPart.value);
 
-                    if (theAction._text.Contains("Stop"))
+                    if (theAction._text.Contains("stop"))
                     {
 						carController.instance.StopSound();
 					}

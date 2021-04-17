@@ -45,16 +45,20 @@ public partial class Wit3D : MonoBehaviour {
 	int samplerate;
 
     // API access parameters
-    string url = "https://api.wit.ai/speech?v=20180206&q=";//iadded the &q= at the end but may make no difference
-    string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
-    //string url = "https://api.wit.ai/message?v=20210308&q=";
-    //string token = "44WF73YZKNO27KSC72I27ROVUQIYJPCH";
-    //string url = "https://api.wit.ai/message?v=20210413&q=";
-    //string token = "QC5G3CSULDCI6NRCEO7K2YILFQSTYRLH";
+    //string url = "https://api.wit.ai/speech?v=20180206&q=";//iadded the &q= at the end but may make no difference this is the treal one
+    //string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
+	string url = "https://api.wit.ai/speech?v=20210413&q=";//this is my one but it needs to connect properly
+	string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
+	//string url = "https://api.wit.ai/message?v=20210308&q=";
+	//string token = "44WF73YZKNO27KSC72I27ROVUQIYJPCH";
+	//string url = "https://api.wit.ai/message?v=20210413&q=";
+	//string token = "QC5G3CSULDCI6NRCEO7K2YILFQSTYRLH";
+	//   string url = "https://api.wit.ai/message?v=20210418&q=";//this is testing the tempreture api thing
+	//string token = "2KIPDNPRV4QSNQ34SFQTRS6NSBPZDLB5";
 
-    //Custom 1
-    // GameObject to use as a default spawn point
-    private bool isRecording = false;
+	//Custom 1
+	// GameObject to use as a default spawn point
+	private bool isRecording = false;
 	private bool pressedButton = false;
 	public Text myResultBox;
 	//public VideoPlayer vidScreen;
