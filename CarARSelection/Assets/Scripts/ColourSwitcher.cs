@@ -16,7 +16,7 @@ public class ColourSwitcher : MonoBehaviour {
 
 	}
 
-	public void colours(string newcol)
+	public void colours(string newcol)//the user definedtarget-1 will change in place of the image target in the heirachy so it can change color etc
 	{
 		currentTracked = getCurrentTracked();
 		Debug.Log(currentTracked.name);

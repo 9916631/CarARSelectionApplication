@@ -41,16 +41,18 @@ public partial class Wit3D : MonoBehaviour {
 	// Class Variables
 
 	// Audio variables
-	public AudioClip commandClip;
-	int samplerate;
+	public AudioClip commandClip;// this is used to over right the sample file in myrequet in mainAR scene
+	int samplerate;//relating to wav file
 
     // API access parameters
-    //string url = "https://api.wit.ai/speech?v=20180206&q=";//iadded the &q= at the end but may make no difference this is the treal one
+    string url = "https://api.wit.ai/speech?v=20180206&q=";// this one works and was first its the guys ai botiadded the &q= at the end but may make no difference this is the treal one
+    string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
+    //string url = "https://api.wit.ai/speech?v=20210413&q=";//this is my one but it needs to connect properly, use this one
     //string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
-	string url = "https://api.wit.ai/speech?v=20210413&q=";//this is my one but it needs to connect properly
-	string token = "GS6J4YIN3645G6I3SDCJBE76PGHWTM7F";
-	//string url = "https://api.wit.ai/message?v=20210308&q=";
-	//string token = "44WF73YZKNO27KSC72I27ROVUQIYJPCH";
+ //   string url = "https://api.wit.ai/speech?v=20210419&q=";//this is igiveup ai bot
+	//string token = "NYIOOK2HLUAQTPPWVFM7SOBJCXDOVRDU";
+	//string url = "https://api.wit.ai/message?v=20210308&q=";//the place the file is sent
+	//string token = "44WF73YZKNO27KSC72I27ROVUQIYJPCH";//handels authoriziatcion of bearer id so it connects to correct application and give authority
 	//string url = "https://api.wit.ai/message?v=20210413&q=";
 	//string token = "QC5G3CSULDCI6NRCEO7K2YILFQSTYRLH";
 	//   string url = "https://api.wit.ai/message?v=20210418&q=";//this is testing the tempreture api thing
@@ -73,7 +75,7 @@ public partial class Wit3D : MonoBehaviour {
 		// System.Net.ServicePointManager.ServerCertificateValidationCallback = (a, b, c, d) => { return true; };
 
 		// set samplerate to 16000 for wit.ai
-		samplerate = 16000;
+		samplerate = 16000;//required for wit ai to understand it.
 		//vidScreen.GetComponent<VideoPlayer> ();
 	}
 
@@ -86,7 +88,6 @@ public partial class Wit3D : MonoBehaviour {
 			isRecording = true;
 			pressedButton = true;
 		}
-
 	}
 	//Custom 3
 	public void playVideo(){
@@ -105,7 +106,7 @@ public partial class Wit3D : MonoBehaviour {
 			pressedButton = false;
 			if (isRecording) {
 				myResultBox.text = "Speak your command...";
-				commandClip = Microphone.Start (null, false, 5, samplerate);  //Start recording (rewriting older recordings)
+				commandClip = Microphone.Start (null, false, 5, samplerate);//Start recording (rewriting older recordings) and 5seconds is best to have for length
 			}
 
 			//Custom 5
@@ -114,7 +115,7 @@ public partial class Wit3D : MonoBehaviour {
 				myResultBox.text = "Saving Voice Request";
 				// Save the audio file
 				Microphone.End (null);
-				if (SavWav.Save ("sample", commandClip)) {
+				if (SavWav.Save ("sample", commandClip)) {//give name sample, passes command clip and save to class savwav
 					myResultBox.text = "Sending audio to AI...";
 				} else {
 					myResultBox.text = "FAILED";

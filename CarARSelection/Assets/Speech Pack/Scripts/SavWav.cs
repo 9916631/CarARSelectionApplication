@@ -38,8 +38,8 @@ public static class SavWav {
 			filename += ".wav";
 		}
 		//CUSTOM 10
-		var filepath = Application.persistentDataPath + "/" + filename;
-		Debug.Log(filepath);
+		var filepath = Application.persistentDataPath + "/" + filename;//this is 100% required to save on mobile device
+		Debug.Log(filepath);//persistant data path is a in built function inside unity and automatcily save on mobile dveice, this detects device version and save file in right location
 
 		// Make sure directory exists if user is saving to sub dir.
 		//Directory.CreateDirectory(Path.GetDirectoryName(filepath));
@@ -48,7 +48,7 @@ public static class SavWav {
 			WriteHeader(fileStream, clip);
 		}
 
-		return true; // TODO: return false if there's a failure saving the file
+		return true; // TODO: return false if there's a failure saving the file//this means its saved succesfully
 	}
 
 	public static AudioClip TrimSilence(AudioClip clip, float min) {
@@ -101,7 +101,7 @@ public static class SavWav {
 		return fileStream;
 	}
 
-	static void ConvertAndWrite(FileStream fileStream, AudioClip clip) {
+	static void ConvertAndWrite(FileStream fileStream, AudioClip clip) {//check to save it as the correct type of audio
 
 		var samples = new float[clip.samples];
 

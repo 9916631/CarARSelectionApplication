@@ -21,8 +21,10 @@ public partial class Wit3D : MonoBehaviour {
 			if (theAction.entities.open != null) {
 				foreach (Open aPart in theAction.entities.open) {
 					Debug.Log (aPart.value);
+					myHandleTextBox.text = aPart.value;
+					actionFound = true;
 
-                    if (theAction._text.Contains("open"))
+					if (theAction._text.Contains("open"))
                     {
 						carController.instance.triggerAnimation("DoorOpen");
 					}
@@ -30,10 +32,7 @@ public partial class Wit3D : MonoBehaviour {
                     else if (theAction._text.Contains("open"))
                     {
 						carController.instance.triggerAnimation("hoodOpen");
-                    }
-
-					myHandleTextBox.text = aPart.value;
-					actionFound = true;
+                    }					
 				}
 			}
 			if (theAction.entities.close != null) {
@@ -87,11 +86,10 @@ public partial class Wit3D : MonoBehaviour {
 				foreach (Colour aPart in theAction.entities.colour)
 				{
 					Debug.Log(aPart.value);
-
-                   
+                    if (theAction._text.Contains("change"))
+                    {
 						ColourSwitcher.instance.colours(aPart.value);
-					
-
+					}	
 					myHandleTextBox.text = aPart.value;
 					actionFound = true;
 				}
