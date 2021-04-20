@@ -8,6 +8,9 @@ public class carController : MonoBehaviour {
 	AudioSource audio;
 	public static carController instance;
 
+	public static int selectedIndex = 0;
+	//selectedindex = i;
+
 	//Create a cloned object so we can access the functions
 	void Awake()
 	{
@@ -28,8 +31,8 @@ public class carController : MonoBehaviour {
 			//Check the current selected item and activate
 			if (transform.GetChild(i).gameObject.name == GameController.currentSelectedCar)
 			{
+				selectedIndex = i;
 				transform.GetChild(i).gameObject.SetActive(true);
-
 				//Get the animator componant from the active item
 				anim = transform.GetChild(i).gameObject.GetComponent<Animator>();
 			}
