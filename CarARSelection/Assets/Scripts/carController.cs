@@ -70,4 +70,16 @@ public class carController : MonoBehaviour {
 		audio = GameObject.Find("/UserDefinedTarget-1/ActiveItems/" + GameController.currentSelectedCar).GetComponent<AudioSource>();
 		audio.Stop();
 	}
+
+	public void KillSound()//dynamicall change the volume on things
+    {
+		GameObject.Find(ColourSwitcher.instance.getCurrentTracked().name + "/ActiveItems/" + GameController.currentSelectedCar + "/video").GetComponent<AudioSource>().volume = 0f;//this goes on the video
+		GameObject.Find(ColourSwitcher.instance.getCurrentTracked().name + "/ActiveItems/" + GameController.currentSelectedCar).GetComponent<AudioSource>().volume = 0f;//this goes on the car itself 
+	}
+
+	public void ResetSound()
+    {
+		GameObject.Find(ColourSwitcher.instance.getCurrentTracked().name + "/ActiveItems/" + GameController.currentSelectedCar + "/video").GetComponent<AudioSource>().volume = 100f;
+		GameObject.Find(ColourSwitcher.instance.getCurrentTracked().name + "/ActiveItems/" + GameController.currentSelectedCar).GetComponent<AudioSource>().volume = 100f;
+	}
 }

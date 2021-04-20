@@ -24,6 +24,27 @@ public class CarSelection : MonoBehaviour {
             if (carList[0])
             {
                 carList[0].SetActive(true);
+                if (carList[0].name == "myLamboConvert")
+                {
+                    carList[0].GetComponent<Animator>().SetTrigger("intro");
+                }
+                if (carList[0].name == "OrangeLambo")
+                {
+                    carList[0].GetComponent<Animator>().SetTrigger("intro");
+                }
+                if (carList[0].name == "myPorsche")
+                {
+                    carList[0].GetComponent<Animator>().SetTrigger("intro");
+                }
+                if (carList[0].name == "Tocus")
+                {
+                    carList[0].GetComponent<Animator>().SetTrigger("intro");
+                }
+                GameObject cloudSystem = (GameObject)Instantiate(Resources.Load("CloudParticale"));
+                ParticleSystem cloudPuff = cloudSystem.GetComponent<ParticleSystem>();
+                cloudPuff.Play();
+                cloudPuff.transform.position = new Vector3(0.65f, -2, 3);
+                Destroy(cloudSystem, 2f);
             }
         }
     }
@@ -50,6 +71,22 @@ public class CarSelection : MonoBehaviour {
 
         //set current car to be actiive from list
         carList[currentCar].SetActive(true);
+        if (carList[currentCar].name == "myLamboConvert")
+        {
+            carList[currentCar].GetComponent<Animator>().SetTrigger("intro");
+        }
+        if (carList[0].name == "myDownloadedLambo")
+        {
+            carList[0].GetComponent<Animator>().SetTrigger("intro");
+        }
+        if (carList[0].name == "myPorsche")
+        {
+            carList[0].GetComponent<Animator>().SetTrigger("intro");
+        }
+        if (carList[0].name == "Tocus")
+        {
+            carList[0].GetComponent<Animator>().SetTrigger("intro");
+        }
         GameController.currentSelectedCar = carList[currentCar].name;
         //partical system stuff
         GameObject cloudSystem = (GameObject)Instantiate(Resources.Load("CloudParticale"));

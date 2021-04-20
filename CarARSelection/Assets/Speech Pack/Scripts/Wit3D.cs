@@ -63,11 +63,11 @@ public partial class Wit3D : MonoBehaviour {
 	private bool isRecording = false;
 	private bool pressedButton = false;
 	public Text myResultBox;
-	//public VideoPlayer vidScreen;
-	//public GameObject vidCanvas;
+    public VideoPlayer vidScreen;
+    public GameObject vidCanvas;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
 		// If you are a Windows user and receiving a Tlserror
 		// See: https://github.com/afauch/wit3d/issues/2
@@ -82,23 +82,25 @@ public partial class Wit3D : MonoBehaviour {
 	//Custom 2
 	public void startStopRecord(){
 		if (isRecording == true) {
+			//carController.instance.ResetSound();
 			pressedButton = true;
 			isRecording = false;
  		} else if (isRecording == false) {
+			//carController.instance.KillSound();
 			isRecording = true;
 			pressedButton = true;
 		}
 	}
 	//Custom 3
 	public void playVideo(){
-		//vidScreen.Play ();
- 		//vidCanvas.SetActive (false);
-	}
+        vidScreen.Play();
+        vidCanvas.SetActive(false);
+    }
 	//Custom 4
 	public void stopVideo(){
-		//vidScreen.Stop ();
-		//vidCanvas.SetActive (true);
-	}
+        vidScreen.Stop();
+        vidCanvas.SetActive(true);
+    }
 
 	// Update is called once per frame
 	void Update () {

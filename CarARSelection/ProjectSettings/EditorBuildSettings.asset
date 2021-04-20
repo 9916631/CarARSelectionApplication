@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainAR.unity
     guid: 9029f07a280071043b08aeb6f9050d53
+  - enabled: 1
+    path: Assets/Scenes/OutDoor.unity
+    guid: 5a978e530cb9d864e9299f1b8c7744fa

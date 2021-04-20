@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Cars Pack\Cars\rotateScript.cs" />
-     <Compile Include="Assets\Common\CameraSettings.cs" />
      <Compile Include="Assets\Common\FrameRateSettings.cs" />
      <Compile Include="Assets\Common\InitErrorHandler.cs" />
      <Compile Include="Assets\Common\MenuAnimator.cs" />
@@ -97,11 +96,13 @@
      <Compile Include="Assets\SamplesResources\VuforiaSamplesUI\Scripts\SamplesMainMenu.cs" />
      <Compile Include="Assets\SamplesResources\VuforiaSamplesUI\Scripts\SamplesNavigationHandler.cs" />
      <Compile Include="Assets\SamplesResources\VuforiaSamplesUI\Scripts\SamplesTapHandler.cs" />
+     <Compile Include="Assets\Scripts\CameraSettings.cs" />
      <Compile Include="Assets\Scripts\carController.cs" />
      <Compile Include="Assets\Scripts\CarSelection.cs" />
      <Compile Include="Assets\Scripts\ColourSwitcher.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\InfoPanel.cs" />
+     <Compile Include="Assets\Scripts\sidePanel.cs" />
      <Compile Include="Assets\Speech Pack\Scripts\_Handle.cs" />
      <Compile Include="Assets\Speech Pack\Scripts\DeployStageOnce.cs" />
      <Compile Include="Assets\Speech Pack\Scripts\SavWav.cs" />
@@ -112,6 +113,7 @@
      <None Include="Assets\SamplesResources\SceneAssets\VirtualButtons\Shaders\Gradient.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
      <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
+     <None Include="Assets\Cars Gui Pack\swapCars.txt" />
      <None Include="Assets\SamplesResources\SceneAssets\CloudReco\Shaders\CR_Custom_TransparentUnlit.shader" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
